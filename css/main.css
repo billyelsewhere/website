@@ -1,0 +1,268 @@
+/** Default section styles **/
+body, div, section, img {
+  	display: grid;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	z-index: 2;
+}
+
+h1, h2, h3, p {
+	margin: 0 0 4% 0;
+	padding: 0;
+}
+
+/** Default heading styles **/
+h1 {
+	font-family: "Argent CF Bold", Helvetica;
+	font-weight: bold;
+	font-size: 12vw;
+	color: white;
+	line-height: 90%;
+}
+
+@media screen and (min-width: 500px) {
+  h1 {
+     font-size: 60px;
+  }
+}
+
+h2 {
+	font-family: "Argent CF Bold", Helvetica;
+	font-weight: bold;
+	font-size: 36px;
+	color: black;
+}
+
+h3 {
+	font-family: "Oakes Grotesk Regular", Helvetica;
+	font-weight: normal;
+	font-size: 14px;
+	color: #B7B7B7;
+}
+
+p {
+	display: grid;
+	font-family: "Oakes Grotesk Regular", Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #272727;
+	line-height: 24px;
+	letter-spacing: 0.75px;
+}
+
+
+
+/* Grid setup */
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  max-width: 1440px;
+  margin: 0 auto 0 auto;
+  background-color: white;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 992px) {
+	#grid-container {	
+		grid-auto-rows: minmax(auto, auto)
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	#grid-container {
+		grid-auto-rows: minmax(40vh, auto)
+	}
+}
+
+#header-grid {
+	display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	grid-column-gap: 20px;
+	max-width: 1440px;
+	margin: 0 auto 0 auto;
+	position: fixed;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	right: 0;
+	grid-auto-rows: minmax(auto, auto)
+
+}
+
+/** style header section **/
+/*
+#we-are-elsewhere {
+	background-color: #5B66EA;
+	height: 100vh;
+	position: relative;
+	margin: 0 0 10% 0;
+	box-shadow: 0 0 5px 0;
+}
+*/
+
+#we-are-elsewhere {
+	background: url('../img/we-are-elsewhere-background.png') no-repeat;
+	background-size: 100% 100%;
+	height: 100vh;
+	position: relative;
+	margin: 0 0 10% 0;
+	box-shadow: 0 0 5px 0;	
+}
+
+
+#logo-menu-container {
+	width: 100vw;
+	position: fixed;
+	z-index: 3;
+}
+
+.menu-front-page {
+	background-color: unset;
+	
+}
+
+.menu-main-sections {
+	background-color: white;
+	box-shadow: 0 0 5px 0;
+	animation: fadeIn 0.5s ease forwards;
+	-webkit-animation: fadeIn 0.5s ease forwards;
+}
+
+img#elsewhere-logo {
+	margin: 1%;
+}
+
+#header-text {
+	grid-column: col-start 3 / span 7;
+	grid-row: 1;
+	display: inline-block;
+	z-index: 2;
+	align-self: center;
+}
+
+#header-text p {
+	color: white;
+	margin: 0 0 15px 0;
+}
+
+
+#theres-more-container {
+	grid-column: col-start / span 12;
+	grid-row: 2;
+	opacity: 0.35;
+	color: black;
+	align-items: end;
+}
+
+p#theres-more {
+	text-align: center;
+	margin-bottom: 2%;
+	color: white;
+}
+
+/* main content blocks */
+.centered-row {
+
+}
+
+.section-img img{
+	max-width: 100%;
+	z-index: 2;
+}
+
+@media only screen and (max-width: 992px) {
+	.section-img {
+		grid-column: col-start 5 / span 4;
+		margin: 0 0 4% 0;
+	}
+
+	.section-text {
+		grid-column: col-start 2 / span 10;
+		margin: 0 0 10% 0;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.section-img img {
+		align-self: center;
+	}
+
+	#grid-container {
+		grid-row-gap: 7%;
+	}
+
+	.embracing-complexity {
+		grid-row: 1;
+	}
+
+	.getting-going {
+		grid-row: 2; 
+	}
+
+	.iterating-tweaking {
+		grid-row: 3;
+	}
+
+	.co-creating-educating {
+		grid-row: 4;
+	}
+
+	.doing-our-bit {
+		grid-row: 5;
+	}
+
+	.section-text {
+
+	}
+
+	.section-left.section-img {
+		grid-column: col-start 3 / span 3;
+	}
+
+	.section-right.section-img {
+		grid-column: col-start 8 / span 3;
+	}
+
+	.section-left.section-text {
+		grid-column: col-start 3 / span 4;
+		align-self: center;
+	}
+
+	.section-right.section-text {
+		grid-column: col-start 7 / span 4;
+		align-self: center;
+	}		
+}
+
+
+/* contact box */
+@media screen and (min-width: 992px) {
+	#contact {
+		grid-column: col-start 5 / span 4;
+		grid-row: 6;
+	}
+
+}
+
+@media screen and (max-width: 992px) {
+	#contact {
+		grid-column: col-start 3 / span 8;
+
+	}
+}
+
+#contact {
+	text-align: center;
+	align-self: center;
+}
+
+#contact-email {
+	font-family: "Oakes Grotesk Regular";
+	font-weight: 500;
+}
